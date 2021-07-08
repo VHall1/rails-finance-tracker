@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_08_011009) do
+ActiveRecord::Schema.define(version: 2021_07_08_015824) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "is_primary"
+  end
 
   create_table "transactions", force: :cascade do |t|
     t.string "title"
